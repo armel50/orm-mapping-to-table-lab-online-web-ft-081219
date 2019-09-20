@@ -7,13 +7,14 @@ class Student
   end
   
   self.create_table
-    <<-SQL 
+    sql = <<-SQL 
       CREATE TABLE students(
        id PRIMARY KEY,
        name TEXT,
        grade TEXT
       )
-    SQL
+    SQL 
+    
   end
   #  with DB[:conn]  
   
