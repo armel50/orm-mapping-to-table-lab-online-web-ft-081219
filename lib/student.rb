@@ -12,7 +12,7 @@ class Student
        id PRIMARY KEY,
        name TEXT,
        grade TEXT
-      )
+      );
     SQL 
     
   end
