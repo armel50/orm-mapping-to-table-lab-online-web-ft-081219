@@ -6,14 +6,15 @@ class Student
     @grade = grade
   end
   
-  self.create_table
+  def self.create_table
     sql = <<-SQL 
-      CREATE TABLE students(
+      CREATE TABLE IF NOT EXISTS students(
        id PRIMARY KEY,
        name TEXT,
        grade TEXT
       );
-    SQL 
+      SQL 
+    DB[:conn].exq(sql)
     
   end
   #  with DB[:conn]  
