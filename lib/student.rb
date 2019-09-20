@@ -38,7 +38,7 @@ class Student
   def self.create(name, grade)
     new_stud = Student.new(name,grade)
  
-  new_stud.save 
+  new_stud.save if new_stud.name != nil && grade != nil
     new_stud
     
   end
