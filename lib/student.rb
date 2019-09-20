@@ -5,6 +5,16 @@ class Student
     @name = name 
     @grade = grade
   end
+  
+  self.create_table
+    <<-SQL 
+      CREATE TABLE students(
+       id PRIMARY KEY,
+       name TEXT,
+       grade TEXT
+      )
+    SQL
+  end
   #  with DB[:conn]  
   
 end
